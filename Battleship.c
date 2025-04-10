@@ -95,11 +95,12 @@ int placeShips(char grid[GRID_SIZE][GRID_SIZE]) {
     return 1;
 }
 
-/* makes sure that the attack being made is inside the grid and/or hasn't already been attacked 
+/* makes sure that the attack being made is inside the grid and/or hasn't already been attacked  
 Hunting Mode: Randomly picks a spot. 
 Targeting Mode: If the AI has already hit a ship, it tries adjacent positions.
 Marking Hits and Misses 'O' for misses and 'X' for hits.
-If the AI hits a ship, it remembers the location (lastHit) to attack nearby. */
+If the AI hits a ship, it remembers the location (lastHit) to attack nearby.
+NOTE THAT THE AI CODE IS NOT MY OWN WORK, i took inspiration from a couple different websites */
 int isValidMove(char grid[GRID_SIZE][GRID_SIZE], int row, int col) {
     return row >= 0 && row < GRID_SIZE && col >= 0 && col < GRID_SIZE &&
            grid[row][col] != 'X' && grid[row][col] != 'O';
